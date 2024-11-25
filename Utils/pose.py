@@ -158,6 +158,7 @@ class kabschor():
     def __init__(self, 
                  ird_3d = 0.3,
                  ird_2d = 10,
+                 w_2d = 0.5,
                  iters = 50000,
                  max_T_pre_batch=5000):
 
@@ -165,7 +166,7 @@ class kabschor():
         self.max_T_pre_batch = max_T_pre_batch # for memory-friendly
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.scaling = True
-        self.w_2d = 0.5
+        self.w_2d = w_2d
         self.ird_3d = ird_3d
         self.ird_2d = ird_2d
         self.iters = iters
